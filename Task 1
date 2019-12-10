@@ -1,0 +1,33 @@
+def Monster_list():
+    monster_list = []
+    with open('Monsters.txt') as M:
+        for lines in M:
+            words = M.readline()
+            print(words, end="")
+
+def Monster_search():
+    x = 0
+    with open("Monsters.txt") as M:
+        Name = input("Enter the name of Monster")
+        for lines in M:
+            words = lines.split(",")
+            Monster_id = words[0]
+            Monster_name = words[1]
+            if Name.upper() == Monster_name.upper():
+                print("The ID of the monster is ",Monster_id,"the name of the monster is ",Monster_name)
+                x += 1
+        if x == 0:
+            print("No Monster Found")
+
+print("Main Menu")
+while True:
+    choice_1 = int(input("1)Display the file contents 2)Search the array for a particular Monster 3)End"))
+    if choice_1 == 1:
+        Monster_list()
+
+    if choice_1 == 2:
+        Monster_search()
+
+    if choice_1 == 3:
+        print("ENDING")
+        break
