@@ -1,0 +1,38 @@
+def input_number():
+    while True:
+        number = int(input("Enter the Number: "))
+        if number >0 and number <= 30:
+            break
+        else:
+            print("The number must be between 1 and 30")
+    return number
+
+Name = input("Enter the Name of the Monster")
+Origin = input("Where is this Monster From")
+Description = input("Enter the description of the Monster")
+print("Attack")
+Attack = input_number()
+print("Magical Force")
+Magical_Force = input_number()
+print("Magical Defence")
+Magical_Defence = input_number()
+print("Defence")
+Defence = input_number()
+print("Intelligence")
+Intelligence = input_number()
+print("Health")
+Health = input_number()
+print("Experience")
+Experience = input_number()
+
+print("\nMONSTER CARD:")
+print("Name: ",Name)
+print("Origin: ",Origin)
+print("Description: ",Description)
+print("\nAttack: ",Attack)
+print("Magical Force: ",Magical_Force)
+print("Magical Defence: ",Magical_Defence)
+print("Defence: ",Defence)
+print("Intelligence: ",Intelligence)
+print("Health: ",Health)
+print("Experience: ", Experience)
